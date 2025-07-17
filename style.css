@@ -95,7 +95,7 @@ main {
 
 .features {
     max-width: 530px;
-    margin-left: 130px;
+    margin-left: 50px;
 }
 
 .feature-title {
@@ -107,11 +107,126 @@ main {
     color: #424242;
 }
 
+.feature-color {
+    color: rgba(255, 144, 14, 1);
+}
+
+.some-facts-heading {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #131313;
+
+}
+
+.some-facts-description {
+    font-size: 1rem;
+    color: #424242;
+}
+
+.facts-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 125px;
+
+}
+
+.fact-container {
+    margin-top: 45px;
+}
+
+.fact {
+    border: 1px solid rgba(255, 144, 14, 1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.fact-number {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.fact-name {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #727272;
+}
+
+.sponsor-info-sec {
+    display: grid;
+    text-align: center;
+}
+
+.sponsor-title {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-top: 150px;
+    margin-bottom: 5px;
+    color: #131313;
+}
+
+.sponsor-description {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #727272;
+
+}
+
+.sponsor-company {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.sponsor-company img {
+    filter: grayscale(100%);
+}
+
 /*responsive*/
 @media screen and (max-width:576px) {
 
     .navbar,
     .nav-link {
         flex-direction: column;
+    }
+}
+
+@media screen and (max-width:576px) {
+
+    .team-image-container,
+    .facts-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        flex-direction: column;
+        max-width: 576px;
+        margin: 0 auto;
+    }
+
+    .facts-container {
+        justify-content: center;
+    }
+
+    .sponsor-center,
+    .sponsor-company {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .team-section {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width:576px) {
+    .sponsor-company {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        flex-direction: column;
+        gap: 20px;
     }
 }
